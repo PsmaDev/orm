@@ -1408,10 +1408,6 @@ class BasicEntityPersister implements EntityPersister
      */
     public function getInsertSQL()
     {
-        if ($this->insertSql !== null) {
-            return $this->insertSql;
-        }
-
         $columns   = $this->getInsertColumnList();
         $tableName = $this->quoteStrategy->getTableName($this->class, $this->platform);
 
